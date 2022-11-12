@@ -1,3 +1,4 @@
+
 /* const http = require('http');
 
 const hostname = '127.0.0.1';
@@ -36,8 +37,20 @@ setTimeout(()=> (console.log('testando setTimeoutmy')),3000)
 
 console.log('comando que esta apos setTimeout') */
 
+function callback_teste(){
+const data = new Date
+h=data.getHours
+m =data.getMinutes
+s =data.getSeconds
+ml= data.getMilliseconds
+ //console.log("Hora"  + ": " + data.getHours() + " : " + data.getMinutes() + " : " + data.getSeconds() )
+} 
+setTimeout (()=>console.log(callback_teste),5000)
+//setTimeout (callback_teste,5000
+//setTimeout (callback_teste,5000)
 
- const data = new Date
- console.log("Hora"  + ": " + data.getHours() + " : " + data.getMinutes() + " : " + data.getSeconds() )
-    
-  
+//setInterval(callback_teste,5000)
+
+//setInterval(callback_teste,5000)
+
+//setInterval(callback_teste,5000)
