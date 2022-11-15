@@ -17,18 +17,35 @@ const stats ={
 console.log('++++++++++++++++++MEMORY STATS+++++++++++++++++')
 console.table(stats)
 
+////////////////////////////////////////////////////
 
-function callback_teste(){
-    const data = new Date
-    h=data.getHours
-    m =data.getMinutes
-    s =data.getSeconds
-    ml= data.getMilliseconds
+const { clear } = require('console')
+const os = require('os') //CARREGANDO OS ARQUIVOS PARA DENTRO DO OBJETO
+const log = require('./logger')
 
-}
+setInterval(() => {
+    const { freemem, totalmem} = os //DESESTRUTURAÇÃO 
 
-//setInterval((stats),5000)
-//console.log()
+    const total = parseInt(totalmem()/1024/1024)
+    const freeMem = parseInt(freemem()/1024/1024)
+    const usage = total - freeMem 
+    const percents = parseInt((usage/total) * 100)
+
+    const stats = {
+        total: `${total}`,
+        freeMem: `${freeMem} MB`,
+        percents: `${percents} % em uso`
+    }
+console.clear()
+console.log('++++++MEMORY STATS++++++')
+console.table(stats)
+
+/*o log esta sendo executado após acima ter sido requerido como variável.*/
+log('Rodando...', JSON.stringify(stats)) 
+
+    }, 1000) 
+
+
 
 
 

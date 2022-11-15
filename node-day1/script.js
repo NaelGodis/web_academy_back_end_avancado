@@ -39,10 +39,10 @@ console.log('comando que esta apos setTimeout') */
 
 function callback_teste(){
 const data = new Date
-h=data.getHours
-m =data.getMinutes
-s =data.getSeconds
-ml= data.getMilliseconds
+//h=data.getHours
+//m =data.getMinutes
+//s =data.getSeconds
+//ml= data.getMilliseconds
  //console.log("Hora"  + ": " + data.getHours() + " : " + data.getMinutes() + " : " + data.getSeconds() )
 } 
 setTimeout (()=>console.log(callback_teste),5000)
